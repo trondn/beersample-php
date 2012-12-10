@@ -21,7 +21,7 @@
             $id = htmlentities(urlencode($b["id"]));
             $text = $b["value"];
             $name = htmlentities(urlencode($text));
-            $params = "id=$id&name=$name&type=brewery"
+            $params = "id=$id&name=$name&type=brewery";
             ?>
             <tr>
                 <td><a href="<?= getContext() ?>/breweries?cmd=show&<?= $params ?>"><?= $text ?></a></td>

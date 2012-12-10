@@ -7,10 +7,6 @@ function getCouchbaseHandle() {
                 true);
 }
 
-function releaseCouchbaseHandle() {
-    // Should I do anythign to release it
-}
-
 function getContext() {
     return $_SERVER['SCRIPT_NAME'];
 }

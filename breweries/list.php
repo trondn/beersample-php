@@ -16,7 +16,6 @@
         <?php
         $cb = getCouchbaseHandle();
         $breweries = $cb->view("brewery", "by_name", array("stale" => "true"));
-        releaseCouchbaseHandle($cb);
 
         foreach ($breweries["rows"] as $b) {
             $id = htmlentities(urlencode($b["id"]));

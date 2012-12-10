@@ -4,7 +4,6 @@ $cb = getCouchbaseHandle();
 $breweries = $cb->view("brewery", "by_name", array("stale" => "true",
         "startkey" => $value,
     "endkey" => $value . "\uefff"));
-releaseCouchbaseHandle($cb);
 
 foreach ($breweries["rows"] as $b) {
     $id = htmlentities(urlencode($b["id"]));

@@ -1,7 +1,6 @@
 <?php
 $cb = getCouchbaseHandle();
 $beer = $cb->get($id);
-releaseCouchbaseHandle($cb);
 
 $obj = json_decode($beer);
 ?>

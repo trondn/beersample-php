@@ -6,5 +6,4 @@ if ($cb->delete($id)) {
     echo "<h3>Deletion failed!</h3>";
     echo "<p>" . $cb->getResultMessage() . "</p>";
 }
-releaseCouchbaseHandle($cb);
 ?>

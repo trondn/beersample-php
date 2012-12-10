@@ -1,6 +1,6 @@
 <?php
 $cb = getCouchbaseHandle();
-$beer = $cb->get($id);
+$beer = $cb->get($id, $cas);
 $obj = json_decode($beer);
 
 /* Insert the updated values */
@@ -14,7 +14,7 @@ $obj->srm = $_POST["beer_srm"];
 $obj->upc = $_POST["beer_upc"];
 $obj->brewery_id = $_POST["beer_brewery_id"];
 
-if ($cb->set($id, json_encode($obj))) {
+if ($cb->set($id, json_encode($obj), $cas)) {
     echo "<h3>\"" . $obj->name . "\" successfully updated</h3>";
 } else {
     ?>

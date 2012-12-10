@@ -21,8 +21,8 @@
 
         foreach ($beers["rows"] as $b) {
             $id = htmlentities(urlencode($b["id"]));
-            $brewery = htmlentities(urlencode($b["key"]));
-            $name = $b["value"];
+            $name = $b["key"];
+            $brewery = htmlentities(urlencode($b["value"]));
 
             $beerlink = "id=$id&name=" . htmlentities(urlencode($name)) . "&type=beer";
             ?>

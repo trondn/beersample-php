@@ -32,7 +32,7 @@ beers - by_name
 
     function (doc, meta) {
         if (doc.type == "beer") {
-            emit(meta.id, doc.name, doc.brewery_id);
+            emit(doc.name, doc.brewery_id);
         }
     }
 

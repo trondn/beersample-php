@@ -14,6 +14,8 @@ if (count($_SERVER["argv"]) == 0) {
         include "common/delete.php";
     } else if ($cmd == "edit") {
         include "breweries/edit.php";
+    } else if ($cmd == "search") {
+        include "breweries/search.php";
     } else {
         echo "<h3>INTERNAL ERROR</H3>";
     }

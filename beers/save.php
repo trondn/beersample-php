@@ -24,6 +24,4 @@ if ($cb->set($id, json_encode($obj))) {
     </p>
     <?php
 }
-
-releaseCouchbaseHandle($cb);
 ?>

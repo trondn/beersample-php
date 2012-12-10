@@ -1,10 +1,13 @@
 <?php
+
+include "couchbase.php";
+
 function getCouchbaseHandle() {
-    return new Couchbase(array("192.168.0.61", "my-second-server", "my-third-server"),
-                "", // Username if needed
-                "", // Password if needed
-                "beer-sample", // Name of the bucket containing the data
-                true);
+    return new Couchbase(COUCHBASE_CONFIG_HOST,
+                    COUCHBASE_CONFIG_USER,
+                    COUCHBASE_CONFIG_PASSWD,
+                    COUCHBASE_CONFIG_BUCKET,
+                    true);
 }
 
 function getContext() {
@@ -36,7 +39,7 @@ function getStylesheets() {
 }
 
 function buildParamArray() {
-        $url = "";
+    $url = "";
     foreach ($_SERVER["argv"] as $v) {
         if ($url == "") {
             $url = $v;

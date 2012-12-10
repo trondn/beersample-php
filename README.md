@@ -39,8 +39,7 @@ beers - by_name
 Couchbase configuration
 -----------------------
 
-Edit the function getCouchbaseHandle in tools.php and add the list of
-hostnames where your cluster is running.
+Edit couchbase.php and set the correct values for the tunables.
 
 
 TODO

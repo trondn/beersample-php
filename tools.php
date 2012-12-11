@@ -26,7 +26,8 @@ function getPath() {
 
 function getRealScript() {
     $full = $_SERVER['SCRIPT_FILENAME'];
-    return substr($full, 0, strrpos($full, '/')) . getPath();
+    $idx = strrpos($full, DIRECTORY_SEPARATOR);
+    return substr($full, 0, $idx) . getPath();
 }
 
 function getStylesheets() {

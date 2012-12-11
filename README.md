@@ -28,7 +28,7 @@ brewery - by_name
         }
     }
 
-beers - by_name
+beer - by_name
 
     function (doc, meta) {
         if (doc.type == "beer") {
